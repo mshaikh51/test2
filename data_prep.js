@@ -30,7 +30,8 @@ module.exports.highGPA=()=>{
         marks=0.0;
         for (i in students) {
             if (students[i]["gpa"] >marks)
-                highest=i
+                highest=i;
+                marks=students[i]["gpa"];
         }
         if (highest==-1) {
             reject("Failed finding the student with the highest GPAno results returned");
